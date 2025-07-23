@@ -50,13 +50,13 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Portfolio'),
       ),
       body: Center(
-        child: Container(
+        child: SizedBox(
           width: 300,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Center(
-                child:Container(
+                child:SizedBox(
                       width: 200,
                       height: 200,
                       child: Text('Log In',style: TextStyle(fontSize: 40,fontFamily: 'Font1'),)
