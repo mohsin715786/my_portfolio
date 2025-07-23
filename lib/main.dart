@@ -18,9 +18,17 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         scaffoldBackgroundColor: Colors.lightBlue[100],
         textTheme: TextTheme(
-          displayLarge: TextStyle(fontWeight: FontWeight.w100,),
-          headlineSmall: TextStyle(fontSize: 25,fontWeight: FontWeight.w300,fontFamily: 'Font1'),
-          bodySmall: TextStyle(fontSize: 25,fontWeight: FontWeight.w100,fontStyle: FontStyle.italic)
+          displayLarge: TextStyle(fontWeight: FontWeight.w100),
+          headlineSmall: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.w300,
+            fontFamily: 'Font1',
+          ),
+          bodySmall: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.w100,
+            fontStyle: FontStyle.italic,
+          ),
         ),
       ),
       home: const MyHomePage(title: 'Muhammad Mohsin Ghafoor'),
@@ -35,7 +43,6 @@ class MyHomePage extends StatefulWidget {
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
-Hamza is here and there 
 
 class _MyHomePageState extends State<MyHomePage> {
   var emailText = TextEditingController();
@@ -46,10 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     var time = DateTime.now();
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text('Portfolio'),
-      ),
+      appBar: AppBar(backgroundColor: Colors.blue, title: Text('Portfolio')),
       body: Center(
         child: SizedBox(
           width: 300,
@@ -57,183 +61,69 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Center(
-                child:SizedBox(
-                      width: 200,
-                      height: 200,
-                      child: Text('Log In',style: TextStyle(fontSize: 40,fontFamily: 'Font1'),)
+                child: SizedBox(
+                  width: 200,
+                  height: 200,
+                  child: Text(
+                    'Log In',
+                    style: TextStyle(fontSize: 40, fontFamily: 'Font1'),
+                  ),
                 ),
               ),
-            TextField(
+              TextField(
                 controller: emailText,
                 decoration: InputDecoration(
                   hintText: 'Enter your Email',
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(21),
-                    borderSide: BorderSide(
-                      color: Colors.blueAccent,
-                      width: 2,
-                    ),
+                    borderSide: BorderSide(color: Colors.blueAccent, width: 2),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(21),
-                    borderSide: BorderSide(
-                    color: Colors.blueAccent,
-                    width: 2,
+                    borderSide: BorderSide(color: Colors.blueAccent, width: 2),
                   ),
+                  prefixIcon: Icon(Icons.email),
                 ),
-                  prefixIcon: Icon(Icons.email)
               ),
-            ),
-            Container(height: 11,),
-            TextField(
-                  controller: passText,
+              Container(height: 11),
+              TextField(
+                controller: passText,
                 obscureText: true,
                 obscuringCharacter: '*',
                 decoration: InputDecoration(
-                hintText: 'Enter your Password',
+                  hintText: 'Enter your Password',
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(21),
-                    borderSide: BorderSide(
-                      color: Colors.blueAccent,
-                      width: 2,
-                    ),
+                    borderSide: BorderSide(color: Colors.blueAccent, width: 2),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(21),
-                    borderSide: BorderSide(
-                    color: Colors.blueAccent,
-                    width: 2,
+                    borderSide: BorderSide(color: Colors.blueAccent, width: 2),
                   ),
+                  prefixIcon: Icon(Icons.password),
                 ),
-                  prefixIcon: Icon(Icons.password)
               ),
-            ),
-            Container(height: 11,),
-            ElevatedButton(onPressed: (){
-                String uEmail = emailText.text;
-                String uPass = passText.text;
-                print("Email : $uEmail , Password : $uPass");
-              }, child: Text('Log In',style: TextStyle(fontSize: 15,fontFamily: 'Font1'),)),
-            Container(height: 11,),
-            Container(child: Text('If you do not have an account please,'),),
-            TextButton(onPressed: (){}, child: Text('Sign Up'))
-
+              Container(height: 11),
+              ElevatedButton(
+                onPressed: () {
+                  String uEmail = emailText.text;
+                  String uPass = passText.text;
+                  print("Email : $uEmail , Password : $uPass");
+                },
+                child: Text(
+                  'Log In',
+                  style: TextStyle(fontSize: 15, fontFamily: 'Font1'),
+                ),
+              ),
+              Container(height: 11),
+              Container(child: Text('If you do not have an account please,')),
+              TextButton(onPressed: () {}, child: Text('Sign Up')),
             ],
           ),
         ),
       ),
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // Grid view
+      // Grid view
       // GridView.count(
       // crossAxisCount: 3,
       // children: [
@@ -264,158 +154,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //   ],
       // ),
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // Date picker and Time Picker
+      // Date picker and Time Picker
       // Center(
       //   child: Column(
       //     mainAxisAlignment: MainAxisAlignment.center,
